@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Restaurants from './RestaurantComponent';
-import './search.css';
+import '../CSS/SearchComponent.css';
 
 class Location extends Component{
     state = {

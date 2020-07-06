@@ -1,6 +1,6 @@
 import React from 'react';
 import Restaurant from './oneRestaurantComponent';
-import './restaurant.css';
+import '../CSS/RestaurantComponent.css';
 
 const Restaurants = (props)=> {
     let restaurants = props.restaurants;

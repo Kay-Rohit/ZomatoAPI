@@ -1,5 +1,5 @@
 import React from 'react';
-import './oneRestaurant.css';
+import '../CSS/oneRestaurantComponent.css';
 
 const Restaurant = (props)=>{
     let { name, featured_image, location, timings, cuisines, user_rating, phone_numbers } = props.details;
