@@ -1,12 +1,13 @@
 import React from 'react';
 import '../CSS/oneRestaurantComponent.css';
 
-const Restaurant = (props)=>{
-    let { name, featured_image, location, timings, cuisines, user_rating, phone_numbers } = props.details;
+const Restaurant = (props) => {
+
+    let { name, thumb, location, timings, cuisines, user_rating, phone_numbers, id} = props.details;
     return (
         <div className="restaurant-card">
             <div className="restaurant-logo-container">
-                <img className="restaurant-logo" src={featured_image} alt="restaurant-logo"></img>
+                <img className="restaurant-logo" src={thumb} alt="Thumbnail"></img>
                 <div className="name">{name}</div>
             </div>
             <div className="restaurant-details">
@@ -20,7 +21,7 @@ const Restaurant = (props)=>{
                 </div>
                 <div className="info-row">
                     <div className="field-name">Rating</div>
-                    <div className="rating">{user_rating.aggregate_rating}</div>
+                    <div className="field-value" style={{color:`#${user_rating.rating_color}`}}>{user_rating.aggregate_rating}</div>
                 </div>
                 <div className="info-row">
                     <div className="field-name">Timings</div>
@@ -31,10 +32,8 @@ const Restaurant = (props)=>{
                     <div className="field-value">{phone_numbers}</div>
                 </div>
             </div>
-            <div>
-            <button class="menu">View Menu</button>
-            </div>
         </div>
     );
 }
+
 export default Restaurant;

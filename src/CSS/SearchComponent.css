@@ -2,8 +2,9 @@
     position: relative;
     top: 20px;
 }
-.location-input{
+.cuisine-input{
     height: 25px;
+    width: 300px;
     border: 1px solid grey;
     border-radius: 2px;
     font-size: 13px;
@@ -11,16 +12,6 @@
     padding-left: 10px;
     background-color: white;
     margin: 10px;
-}
-.findme-button{
-    background-color:#CB202D;
-    color: white;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: bold;
-    height: 35px;
-    cursor: pointer;
-    margin-right: 5px;
 }
 .search-button{
     background-color:#CB202D;

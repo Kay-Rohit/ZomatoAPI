@@ -1,12 +1,23 @@
 import React from 'react';
 import Restaurant from './oneRestaurantComponent';
+import {Link} from 'react-router-dom';
 import '../CSS/RestaurantComponent.css';
+import { FadeTransform } from "react-animation-components";
 
 const Restaurants = (props)=> {
     let restaurants = props.restaurants;
-    restaurants = restaurants.map((item, index)=>{
+    restaurants = restaurants.map((item)=>{
         return (
-            <Restaurant key={index} details={item.restaurant}/>
+            <>
+            <FadeTransform
+                in
+                transformProps={{ exitTransform: "scale(0.5) translateY(-50%)" }}
+            >
+                <Link to={`/${item.restaurant.id}`}>
+                    <Restaurant key={item.restaurant.id} details={item.restaurant}/>
+                </Link>
+            </FadeTransform>
+            </>
         );
     });
     if (restaurants.length){
